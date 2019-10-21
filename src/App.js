@@ -1,5 +1,7 @@
 import React from 'react';
+import logo from './logo.svg';
 import './App.css';
+import Number from './components/Number';
 
 class App extends React.Component {
   constructor(props) {
@@ -9,11 +11,10 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-          <button onClick={() => 
-          { this.setState({number: 1})}}>
-            +
-          </button >
-          <p>number: {this.state.number}</p>
+        <header className="App-header">
+          <img src={logo} className="App-logo" alt="logo" />
+          <Number numberApi={this.state}/>
+        </header>
       </div>
     );
   }
